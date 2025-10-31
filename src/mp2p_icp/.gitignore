@@ -1,0 +1,19 @@
+CMakeCache.txt
+CMakeLists.txt.user*
+CMakeFiles
+CMakeScripts
+Testing
+build
+log
+install
+build-*
+CTestTestfile.cmake
+install_manifest.txt
+
+
+#visual studio
+.vs/*
+.vscode/*
+!.vscode/settings.json
+**/.vscode
+.cache

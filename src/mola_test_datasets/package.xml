@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!-- This is a ROS package file, intended to allow this library to be built
+     side-by-side to ROS packages in a catkin/ament environment.
+-->
+<package format="3">
+  <name>mola_test_datasets</name>
+  <version>0.4.2</version>
+  <description>Small SLAM dataset extracts used for demos or unit tests in the rest of MOLA packages</description>
+
+  <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+
+  <!-- ROS package files and READMEs -->
+  <license file="LICENSE">BSD-3-Clause</license>
+  <!-- Dataset licenses -->
+  <license file="datasets/g2o/LICENSE">BSD-3-Clause</license>
+  <license file="datasets/kitti/LICENSE">CC-BY-NC-SA-3.0</license>
+  <license file="datasets/radish/LICENSE">CC-BY-3.0</license>
+  <license file="datasets/ual/LICENSE">CC-BY-3.0</license>
+  <license file="datasets/mulran/LICENSE">CC-BY-NC-SA-4.0</license>
+
+  <url type="website">https://github.com/MOLAorg/</url>
+
+  <author     email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</author>
+
+  <doc_depend>doxygen</doc_depend>
+
+  <!-- COMMON DEPS -->
+  <build_depend>ros_environment</build_depend>
+
+  <!-- BUILD TOOLS -->
+  <buildtool_depend>cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_gtest</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- ROS2 -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_cmake_lint_cmake</test_depend>
+  <test_depend>ament_cmake_pep257</test_depend>
+  <test_depend>ament_cmake_uncrustify</test_depend>
+  <test_depend>ament_cmake_xmllint</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

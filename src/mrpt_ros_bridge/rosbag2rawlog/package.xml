@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rosbag2rawlog</name>
+  <version>2.14.15</version>
+  <description>CLI tool to transform between rosbags and rawlogs.</description>
+
+  <maintainer email="markus.bader@tuwien.ac.at">Markus Bader</maintainer>
+  <maintainer email="joseluisblancoc@gmail.com">Jose Luis Blanco-Claraco</maintainer>
+
+  <license>BSD</license>
+  <url type="website">https://github.com/mrpt/mrpt_ros_bridge</url>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- DEPS -->
+  <depend>cli11</depend>
+  <depend>cv_bridge</depend>
+  <depend>mrpt_libapps</depend>
+  <depend>mrpt_libros_bridge</depend>
+  <depend>mrpt_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>rosbag2_cpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>tf2_msgs</depend>
+  <depend>tf2_ros</depend>
+
+  <depend>ament_cmake_lint_cmake</depend>
+  <depend>ament_cmake_xmllint</depend>
+  <depend>ament_lint_auto</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

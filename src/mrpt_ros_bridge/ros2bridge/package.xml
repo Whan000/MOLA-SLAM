@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mrpt_libros_bridge</name>
+  <!-- Before updating version number, read [MRPT_ROOT]/version_prefix.txt first -->
+  <version>2.14.15</version>
+  <description>Mobile Robot Programming Toolkit (MRPT) ros2bridge C++ library</description>
+
+  <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+  <license>BSD</license>
+
+  <url type="website">https://www.mrpt.org/</url>
+  <url type="bugtracker">https://github.com/MRPT/mrpt/issues</url>
+
+  <author email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</author>
+
+  <!-- Deps required by user code (they are in public headers or built as ROS (vs system) packages -->
+  <depend>mrpt_libapps</depend>
+
+  <!-- COMMON DEPS: This ensures we have ROS_DISTRO, etc. env vars -->
+  <build_depend>ros_environment</build_depend>
+
+  <!-- Deps required by building only -->
+
+  <!-- Required for cmake scripts to find ament_cmake and then realize we are in ROS 2, not ROS 1 -->
+  <build_depend condition="$ROS_VERSION == 2">ament_cmake</build_depend>
+
+  <!-- for rosbag2rawlog (ROS 1 only, ROS 2 version lives in the mrpt_libnavigation repository) -->
+  <build_depend>tf2_geometry_msgs</build_depend>
+
+  <!-- Deps for cmake to realize we have ROS1 -->
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>stereo_msgs</build_depend>
+  <build_depend>tf2</build_depend>
+
+  <doc_depend>doxygen</doc_depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <!-- Minimum entries to release non-catkin pkgs: -->
+  <buildtool_depend>cmake</buildtool_depend>
+  <export>
+    <build_type>cmake</build_type>
+    <rosdoc config="doc/rosdoc.yaml" />
+  </export>
+  <!-- End -->
+
+</package>

@@ -1,0 +1,13 @@
+@PACKAGE_INIT@
+
+find_package(mrpt_libros_bridge REQUIRED)
+
+# Provide an alias target so consumers can do: target_link_libraries(... mrpt::ros2bridge)
+if(NOT TARGET mrpt::ros2bridge)
+  add_library(mrpt::ros2bridge ALIAS mrpt_libros_bridge::mrpt_libros_bridge)
+endif()
+
+# Make sure mrpt-apps is also found:
+include(CMakeFindDependencyMacro)
+
+find_dependency(mrpt-apps REQUIRED)
